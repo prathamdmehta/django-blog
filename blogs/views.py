@@ -1,3 +1,21 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
+from .models import Blog, Category
 
 # Create your views here.
+def post_by_category(request, category_id):
+    # fetch the post, that belongd t ocategory with id category_id
+    posts = Blog.objects.filter(status='Published', category=category_id)
+    # try except when we wnat to do some custom action if category does not exist
+    # try:
+    #     category = Category.objects.get(pk=category_id)
+    # except:
+    #     # redirect user to home page
+    #     return redirect('home')
+    #use get_object_or_404 when u want to show 404 error page if the category does not exist
+    category = get_object_or_404(Category, pk=category_id)
+
+    context = {
+        'posts': posts,
+        'category': category
+    }
+    return render(request, 'posts_by_category.html', context)
