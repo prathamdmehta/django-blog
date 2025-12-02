@@ -1,14 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-      
-      {% comment %} Dynamic Post {% endcomment %}
-      <h3 class="text-uppercase text-warning" style="letter-spacing: 2px">
-        Category - {{category}}
+
+<h3 class="text-warning" style="letter-spacing: 2px">
+        Search Term - {{keyword}}
       </h3>
       <div class="row mb-2">
-        {% if posts %}
-        {% for post in posts %}
+        {% if blogs %}
+        {% for post in blogs %}
         <div class="col-md-6">
           <div class="card border-0">
             <div class="card-body">
@@ -25,7 +24,4 @@
     </div>
 
 {% endblock %}
-{% comment %} even if i dont write category_name inside cat.category_name than
-too it will show the content on the home page because in the models.py we have
-given a __str__ string representation in which we are returning category_name
-(in line 30) {% endcomment %}
+
