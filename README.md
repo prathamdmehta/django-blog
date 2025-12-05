@@ -3,6 +3,8 @@
 This repository contains the source code for a full‑featured blog website built with Django.  
 It was developed while following the “Django Blogging System” premium course by Tech With Rathan, and then customized and extended as part of a personal learning project.
 
+![Blog UI](UI.png)
+
 ## What this project includes
 
 - Real‑world Django project structure with separate apps for blogs, dashboards, and assignments.  
