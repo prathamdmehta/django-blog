@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Django Blog Website
 
 This repository contains the source code for a full‑featured blog website built with Django.  
@@ -67,3 +68,6 @@ python manage.py createsuperuser
 6. **Run the development server**
 
 python manage.py runserver
+=======
+
+>>>>>>> 1625f8ed55617dd337038c57e8db1f6aa9e2d1ec
